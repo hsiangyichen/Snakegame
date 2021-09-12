@@ -118,7 +118,11 @@ while running:
     #         gameOver = True
     #     count -= 1
 
-    if snake_display[0] in snake_display[1:]:
+    if snake_display[0].x not in range(6, 744):
+        gameOver = True
+    elif snake_display[0].y not in range(6, 494):
+        gameOver = True
+    elif snake_display[0] in snake_display[1:]:
         gameOver = True
 
     while gameOver:
